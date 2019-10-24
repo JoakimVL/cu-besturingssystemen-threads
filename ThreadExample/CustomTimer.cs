@@ -30,6 +30,15 @@ namespace ThreadExample
             {
                 running = true;
                 timerThread = new Thread(() => { TimerProcedure(); });
+                
+                //fix voor het afsluiten van de applicatie wanneer het proces loopt
+                //door de thread als background in te stellen wordt het 'onderdeel' van de main thread
+                //doe je deze stap niet, dan sluit de main thread eerst af, maar wordt er eerst nog 
+                //een event opgegooid om de laatste tik te propageren. Tijdens afsluiten bestaat deze
+                //echter niet meer. Door doordat de thread nu een achtergrondproces is geworden is het
+                //dus 'onderdeel' van de main thread, waardoor we geen exception krijgen.
+                timerThread.IsBackground = true;
+                
                 timerThread.Start();
             }            
         }
