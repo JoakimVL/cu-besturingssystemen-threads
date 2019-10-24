@@ -31,7 +31,7 @@ namespace ThreadExample
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Start(object sender, RoutedEventArgs e)
         {
             myTimer.Start();
         }
@@ -56,7 +56,7 @@ namespace ThreadExample
             Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Stop(object sender, RoutedEventArgs e)
         {
             myTimer.Stop();
         }

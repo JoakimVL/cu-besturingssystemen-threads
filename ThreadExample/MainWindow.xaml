@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="200" Width="200" Closed="Window_Closed">
     <Grid>
-        <Button Content="Start timer" HorizontalAlignment="Left" Margin="23,26,0,0" VerticalAlignment="Top" Width="146" Click="Button_Click"/>
+        <Button Content="Start timer" HorizontalAlignment="Left" Margin="23,26,0,0" VerticalAlignment="Top" Width="146" Click="Button_Start"/>
         <Label x:Name="lblTime" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="23,84,0,0" VerticalAlignment="Top" Width="146" Height="76" FontSize="24" FontWeight="Bold"/>
-        <Button Content="Stop timer" HorizontalAlignment="Left" Margin="23,50,0,0" VerticalAlignment="Top" Width="146" Click="Button_Click_1"/>
+        <Button Content="Stop timer" HorizontalAlignment="Left" Margin="23,50,0,0" VerticalAlignment="Top" Width="146" Click="Button_Stop"/>
 
     </Grid>
 </Window>
